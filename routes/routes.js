@@ -9,6 +9,10 @@ router.get('/alunos/reprovados', (req, res) => alunosController.getReprovados(re
 router.get('/alunos/:id', (req, res) => alunosController.get(req, res))
 router.post('/alunos', (req, res) => alunosController.create(req, res))
 router.delete('/alunos/deletar', (req, res) => alunosController.delete(req, res))
-router.put('/alunos/:id', (req, res) => alunosController.update(req, res))
+router.delete('/alunos/:id', (req, res) => alunosController.deleteID(req, res))
+router.delete('/alunos', (req, res) => alunosController.deleteAll(req, res))
+router.put('/alunos/update', (req, res) => alunosController.update(req, res))
+router.put('/alunos/:id', (req, res) => alunosController.updateID(req, res))
+
 
 module.exports = router
